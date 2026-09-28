@@ -1,0 +1,35 @@
+feature,n_categories,dominant,dominant_pct,n_rare_(<1%),rare_categories
+SEX,2,Female,52.8,0,
+RACETHX,5,NH White,54.5,0,
+REGION22,5,South,38.3,1,Not in scope 12/31
+MARRY22X,8,Married,38.5,2,"Refused, Don't know"
+HIDEG,10,High school,30.6,2,"Don't know, Refused"
+INSCOV22,3,Any private,58.5,0,
+EMPST53,8,Employed,45.4,4,"Refused, Job to return to, Cannot be computed, Don't know"
+HAVEUS42,5,Yes,71.5,0,
+BORNUSA,5,Yes,83.1,3,"Inapplicable, Refused, Don't know"
+POVCAT22,5,High income,37.0,0,
+RTHLTH53,8,Very good,32.3,2,"Refused, Don't know"
+MNHLTH53,8,Very good,30.8,2,"Refused, Don't know"
+OFTSMK53,6,Not at all,69.6,2,"Refused, Don't know"
+HIBPDX,5,No,49.5,2,"Don't know, Refused"
+CHDDX,5,No,75.3,2,"Don't know, Refused"
+ANGIDX,5,No,78.5,2,"Don't know, Refused"
+MIDX,5,No,76.9,2,"Don't know, Refused"
+OHRTDX,5,No,70.4,2,"Don't know, Refused"
+STRKDX,5,No,76.3,2,"Don't know, Refused"
+EMPHDX,5,No,78.6,2,"Don't know, Refused"
+CHOLDX,5,No,51.6,2,"Don't know, Refused"
+CANCERDX,6,No,69.6,3,"Don't know, Cannot be computed, Refused"
+DIABDX_M18,5,No,88.2,3,"Inapplicable, Don't know, Refused"
+ARTHDX,5,No,56.2,2,"Don't know, Refused"
+ASTHDX,5,No,85.8,3,"Inapplicable, Don't know, Refused"
+ADHDADDX,4,Inapplicable,84.1,1,Don't know
+ACTLIM31,5,No,84.9,2,"Refused, Don't know"
+WLKLIM31,5,No,86.7,3,"Inapplicable, Refused, Don't know"
+COGLIM31,4,No,74.1,1,Don't know
+ADLHLP31,5,No,96.8,3,"Inapplicable, Refused, Don't know"
+IADLHP31,5,No,95.2,3,"Inapplicable, Refused, Don't know"
+MCARE22,3,No,73.6,1,Inapplicable
+MCAID22,3,No,75.4,1,Inapplicable
+UNINS22,2,No,93.2,0,

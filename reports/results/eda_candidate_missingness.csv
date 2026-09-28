@@ -1,0 +1,44 @@
+feature,label,pct_inapplicable,pct_missing,pct_total
+ADHDADDX,ADHD (children),84.1,0.0,84.11
+DDNWRK22,Work days missed,43.19,12.85,56.04
+ADBMI42,Adult BMI,48.04,3.21,51.25
+PHQ242,PHQ-2 depression score,48.04,3.07,51.11
+K6SUM42,K6 psychological distress,48.04,2.19,50.23
+OFTSMK53,Smoking frequency,20.18,0.74,20.92
+COGLIM31,Cognitive limitation,20.34,0.11,20.45
+CHOLDX,High cholesterol,19.68,0.13,19.81
+CHDDX,Coronary heart disease,19.68,0.08,19.76
+HIBPDX,High blood pressure,19.68,0.08,19.76
+ARTHDX,Arthritis,19.68,0.06,19.74
+CANCERDX,Cancer,19.68,0.06,19.74
+ANGIDX,Angina,19.68,0.06,19.74
+STRKDX,Stroke,19.68,0.05,19.73
+OHRTDX,Other heart disease,19.68,0.05,19.73
+EMPHDX,Emphysema,19.68,0.04,19.72
+MIDX,Heart attack,19.68,0.04,19.71
+EMPST53,Employment status,17.55,0.65,18.2
+ACTLIM31,Activity limitation,5.36,0.24,5.6
+HAVEUS42,Has usual source of care,1.07,3.38,4.45
+MNHLTH53,Perceived mental health,1.14,0.23,1.37
+RTHLTH53,Perceived physical health,1.14,0.21,1.34
+IADLHP31,Needs help with IADLs,0.89,0.27,1.16
+WLKLIM31,Walking limitation,0.89,0.17,1.06
+ADLHLP31,Needs help with ADLs,0.89,0.17,1.06
+FAMSZE22,Family size,0.91,0.0,0.91
+AGE22X,Age (12/31/22),0.86,0.0,0.86
+MCAID22,Medicaid (any in 2022),0.86,0.0,0.86
+REGION22,Region,0.86,0.0,0.86
+MCARE22,Medicare (any in 2022),0.86,0.0,0.86
+HIDEG,Highest degree,0.0,0.69,0.69
+DIABDX_M18,Diabetes,0.24,0.05,0.29
+ASTHDX,Asthma,0.24,0.04,0.29
+BORNUSA,Born in USA,0.14,0.1,0.24
+MARRY22X,Marital status,0.0,0.01,0.01
+RACETHX,Race/ethnicity,0.0,0.0,0.0
+SEX,Sex,0.0,0.0,0.0
+TTLP22X,Personal income ($),0.0,0.0,0.0
+POVLEV22,Income as % of poverty line,0.0,0.0,0.0
+FAMINC22,Family income ($),0.0,0.0,0.0
+POVCAT22,Poverty category,0.0,0.0,0.0
+INSCOV22,Insurance coverage,0.0,0.0,0.0
+UNINS22,Uninsured all year,0.0,0.0,0.0

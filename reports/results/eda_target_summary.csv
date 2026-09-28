@@ -1,0 +1,18 @@
+,value
+count,21747.0
+mean,7780.26
+median,1679.0
+std,23244.2
+min,0.0
+Q1 (25%),291.0
+Q3 (75%),6615.0
+P80,8913.6
+P90,19180.2
+P95,34375.9
+P99,88394.98
+max,1338276.0
+skewness,18.07
+kurtosis,692.64
+zero spend (%),14.3
+skewness of log1p,-1.03
+skewness of log (non-zero),-0.21

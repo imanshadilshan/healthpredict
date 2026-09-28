@@ -1,0 +1,47 @@
+feature,label,type,chi2,p_value,cramers_v,spearman_vs_TOTEXP22,mann_whitney_p
+SEX,Sex,categorical,106.4162,0.0,0.07,,
+RACETHX,Race/ethnicity,categorical,496.5945,0.0,0.1511,,
+REGION22,Region,categorical,81.1913,0.0,0.0611,,
+MARRY22X,Marital status,categorical,1276.2831,0.0,0.2423,,
+HIDEG,Highest degree,categorical,816.3855,0.0,0.1938,,
+INSCOV22,Insurance coverage,categorical,368.1347,0.0,0.1301,,
+EMPST53,Employment status,categorical,1312.4949,0.0,0.2457,,
+HAVEUS42,Has usual source of care,categorical,500.5975,0.0,0.1517,,
+BORNUSA,Born in USA,categorical,122.2424,0.0,0.075,,
+POVCAT22,Poverty category,categorical,38.2382,0.0,0.0419,,
+RTHLTH53,Perceived physical health,categorical,1898.3803,0.0,0.2955,,
+MNHLTH53,Perceived mental health,categorical,684.4425,0.0,0.1774,,
+OFTSMK53,Smoking frequency,categorical,590.8704,0.0,0.1648,,
+HIBPDX,High blood pressure,categorical,1783.2365,0.0,0.2864,,
+CHDDX,Coronary heart disease,categorical,1364.1351,0.0,0.2505,,
+ANGIDX,Angina,categorical,968.8402,0.0,0.2111,,
+MIDX,Heart attack,categorical,1096.6422,0.0,0.2246,,
+OHRTDX,Other heart disease,categorical,1513.3694,0.0,0.2638,,
+STRKDX,Stroke,categorical,1199.8637,0.0,0.2349,,
+EMPHDX,Emphysema,categorical,1015.0727,0.0,0.216,,
+CHOLDX,High cholesterol,categorical,1610.0055,0.0,0.2721,,
+CANCERDX,Cancer,categorical,1518.0548,0.0,0.2642,,
+DIABDX_M18,Diabetes,categorical,1492.3681,0.0,0.262,,
+ARTHDX,Arthritis,categorical,2384.2336,0.0,0.3311,,
+ASTHDX,Asthma,categorical,248.1637,0.0,0.1068,,
+ADHDADDX,ADHD (children),categorical,607.3389,0.0,0.1671,,
+ACTLIM31,Activity limitation,categorical,2042.7182,0.0,0.3065,,
+WLKLIM31,Walking limitation,categorical,2385.1135,0.0,0.3312,,
+COGLIM31,Cognitive limitation,categorical,1439.2552,0.0,0.2573,,
+ADLHLP31,Needs help with ADLs,categorical,745.081,0.0,0.1851,,
+IADLHP31,Needs help with IADLs,categorical,1066.5165,0.0,0.2215,,
+MCARE22,Medicare (any in 2022),categorical,1811.7565,0.0,0.2886,,
+MCAID22,Medicaid (any in 2022),categorical,35.5956,0.0,0.0405,,
+UNINS22,Uninsured all year,categorical,274.8906,0.0,0.1124,,
+N_CONDITIONS,engineered,engineered,3701.3414,0.0,0.4126,,
+AGE_BAND,engineered,engineered,2021.6668,0.0,0.3049,,
+ANY_LIMITATION,engineered,engineered,2682.8685,0.0,0.3512,,
+AGE22X,Age (12/31/22),numeric,,,,0.4155,0.0
+FAMINC22,Family income ($),numeric,,,,0.0137,0.0
+POVLEV22,Income as % of poverty line,numeric,,,,0.1206,0.9251
+TTLP22X,Personal income ($),numeric,,,,0.202,0.0
+FAMSZE22,Family size,numeric,,,,-0.3365,0.0
+ADBMI42,Adult BMI,numeric,,,,0.0734,0.0
+K6SUM42,K6 psychological distress,numeric,,,,0.1888,0.0
+PHQ242,PHQ-2 depression score,numeric,,,,0.1519,0.0
+DDNWRK22,Work days missed,numeric,,,,0.3566,0.0
