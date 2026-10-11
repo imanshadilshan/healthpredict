@@ -1,0 +1,11 @@
+{
+  "Logistic Regression": "L2 + balanced",
+  "KNN": "k=75, uniform, euclidean",
+  "Decision Tree": "Entropy, max_depth=6",
+  "Random Forest": "300 trees, min_samples_leaf=5",
+  "SVM": "Linear kernel",
+  "Naive Bayes": "Bernoulli NB, equal priors",
+  "Gradient Boosting": "HistGradientBoosting + balanced",
+  "XGBoost": "scale_pos_weight, depth 3, 600 trees",
+  "Voting": "Soft voting (LR + RF + XGB)"
+}

@@ -1,0 +1,42 @@
+,type,mutual_info,rf_importance,l1_kept,rfecv_kept,redundant,weak_mi,weak_rf,weak_everywhere,decision
+ANY_LIMITATION,engineered,0.0507,0.042,True,True,True,False,False,False,drop (redundant)
+AGE_BAND,engineered,0.0483,0.0312,False,True,True,False,False,False,drop (redundant)
+POVCAT22,ordinal,0.0008,0.0174,False,False,True,True,False,False,drop (redundant)
+OUT_OF_SCOPE_1231,engineered,0.0009,0.0003,False,False,False,True,True,True,drop (weak on all methods)
+N_CONDITIONS,engineered,0.079,0.0836,True,True,False,False,False,False,keep
+N_LIMITATIONS,engineered,0.0543,0.0392,True,True,False,False,False,False,keep
+ARTHDX,yes/no flag,0.0522,0.0564,False,True,False,False,False,False,keep
+AGELAST,numeric,0.0504,0.0739,True,True,False,False,False,False,keep
+WLKLIM31,yes/no flag,0.0441,0.0401,False,True,False,False,False,False,keep
+HIBPDX,yes/no flag,0.0425,0.0256,True,True,False,False,False,False,keep
+RTHLTH53,ordinal,0.039,0.0349,True,True,False,False,False,False,keep
+CHOLDX,yes/no flag,0.0385,0.0217,True,True,False,False,False,False,keep
+MCARE22,yes/no flag,0.0378,0.0408,True,True,False,False,False,False,keep
+ACTLIM31,yes/no flag,0.0375,0.0218,True,True,False,False,False,False,keep
+OHRTDX,yes/no flag,0.0358,0.0157,False,True,False,False,False,False,keep
+CANCERDX,yes/no flag,0.0357,0.0187,True,True,False,False,False,False,keep
+COGLIM31,yes/no flag,0.0336,0.0101,False,True,False,False,False,False,keep
+CHDDX,yes/no flag,0.0325,0.0073,False,True,False,False,True,False,keep
+MARRY22X,nominal,0.032,0.0218,False,True,False,False,False,False,keep
+EMPST53,nominal,0.0303,0.0173,False,True,False,False,False,False,keep
+STRKDX,yes/no flag,0.0292,0.0059,False,True,False,False,True,False,keep
+DIABDX_M18,yes/no flag,0.0283,0.0353,True,True,False,False,False,False,keep
+FAMSZE22,numeric,0.0273,0.0262,True,True,False,False,False,False,keep
+MIDX,yes/no flag,0.0273,0.0062,False,True,False,False,True,False,keep
+EMPHDX,yes/no flag,0.026,0.0036,False,True,False,False,True,False,keep
+ANGIDX,yes/no flag,0.0257,0.0064,False,True,False,False,True,False,keep
+HIDEG,nominal,0.0231,0.0352,True,True,False,False,False,False,keep
+IADLHP31,yes/no flag,0.0179,0.0057,False,True,False,False,True,False,keep
+OFTSMK53,nominal,0.0158,0.0097,False,True,False,False,False,False,keep
+MNHLTH53,ordinal,0.0125,0.0269,True,True,False,False,False,False,keep
+ADLHLP31,yes/no flag,0.0124,0.0034,True,True,False,False,True,False,keep
+RACETHX,nominal,0.0118,0.0305,True,True,False,False,False,False,keep
+HAVEUS42,nominal,0.0112,0.026,True,True,False,True,False,False,keep
+INSCOV22,nominal,0.0103,0.0205,True,True,False,True,False,False,keep
+UNINS22,yes/no flag,0.0087,0.0066,False,True,False,True,True,False,keep
+ASTHDX,yes/no flag,0.0052,0.0096,True,True,False,True,True,False,keep
+BORNUSA,nominal,0.0028,0.012,True,True,False,True,False,False,keep
+SEX,nominal,0.0023,0.0154,True,True,False,True,False,False,keep
+POVLEV22,numeric,0.0021,0.0551,True,True,False,True,False,False,keep
+REGION22,nominal,0.0016,0.0311,True,True,False,True,False,False,keep
+MCAID22,yes/no flag,0.0009,0.0088,False,True,False,True,True,False,keep

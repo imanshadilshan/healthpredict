@@ -1,0 +1,18 @@
+{
+  "shortlist": [
+    "Voting",
+    "XGBoost",
+    "Logistic Regression"
+  ],
+  "variants": {
+    "Voting": "Soft voting (LR + RF + XGB)",
+    "XGBoost": "scale_pos_weight, depth 3, 600 trees",
+    "Logistic Regression": "L2 + balanced"
+  },
+  "rule": "not distinguishable from the top model (Nadeau-Bengio corrected t-test, p >= 0.05), best per model family, plus logistic regression as the explainable benchmark",
+  "cv_roc_auc": {
+    "Voting": 0.8263,
+    "XGBoost": 0.8242,
+    "Logistic Regression": 0.8222
+  }
+}

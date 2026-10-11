@@ -1,0 +1,11 @@
+,variant,accuracy,precision,recall,f1,roc_auc,pr_auc,balanced_accuracy,roc_auc_std,train_roc_auc,fit_time_s
+Voting,Soft voting (LR + RF + XGB),0.7719,0.4547,0.7034,0.5523,0.8263,0.5685,0.7462,0.0038,0.8916,3.4602
+XGBoost,"scale_pos_weight, depth 3, 600 trees",0.7559,0.4347,0.7333,0.5458,0.8242,0.5653,0.7475,0.0035,0.8739,2.0945
+Logistic Regression,L2 + balanced,0.7559,0.4339,0.7239,0.5426,0.8222,0.5655,0.7439,0.0037,0.8284,0.579
+Gradient Boosting,HistGradientBoosting + balanced,0.7525,0.4302,0.7307,0.5415,0.8214,0.5606,0.7443,0.0048,0.8772,3.8038
+SVM,Linear kernel,0.7648,0.4446,0.706,0.5456,0.8206,0.5618,0.7428,0.0058,0.8262,52.2408
+Random Forest,"300 trees, min_samples_leaf=5",0.7883,0.4784,0.6457,0.5496,0.8206,0.5529,0.7348,0.0045,0.9329,1.8308
+KNN,"k=75, uniform, euclidean",0.8266,0.6947,0.2425,0.3586,0.8107,0.539,0.6076,0.0041,0.8284,0.1886
+Naive Bayes,"Bernoulli NB, equal priors",0.699,0.3758,0.7629,0.5035,0.7996,0.5309,0.723,0.0034,0.8002,0.212
+Decision Tree,"Entropy, max_depth=6",0.7193,0.3953,0.7264,0.5093,0.792,0.4866,0.722,0.0048,0.8203,0.4004
+Dummy,always predicts low cost,0.8,0.0,0.0,0.0,0.5,0.2,0.5,0.0,0.5,0.3747

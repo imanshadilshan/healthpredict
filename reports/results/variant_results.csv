@@ -1,0 +1,34 @@
+algorithm,variant,roc_auc,roc_auc_std,pr_auc,f1,recall,precision,train_roc_auc,fit_time_s
+Logistic Regression,"L2, no class weight",0.8223,0.0034,0.5673,0.4459,0.3399,0.6487,0.8277,0.5633
+Logistic Regression,L2 + balanced,0.8222,0.0037,0.5655,0.5426,0.7239,0.4339,0.8284,0.6012
+Logistic Regression,L1 + balanced,0.8224,0.0035,0.5654,0.5431,0.7241,0.4346,0.8284,4.6341
+Logistic Regression,ElasticNet + balanced,0.8223,0.0036,0.5655,0.5429,0.7241,0.4342,0.8284,46.3275
+KNN,"k=15, uniform, euclidean",0.7851,0.0082,0.4874,0.3873,0.2805,0.6271,0.8589,0.1708
+KNN,"k=75, uniform, euclidean",0.8107,0.0041,0.539,0.3586,0.2425,0.6947,0.8284,0.2234
+KNN,"k=75, distance-weighted",0.8109,0.0041,0.5453,0.3597,0.2437,0.6928,1.0,0.2288
+KNN,"k=75, manhattan",0.8093,0.0056,0.5365,0.3277,0.2141,0.7038,0.8283,0.2376
+KNN,k=75 + SMOTE,0.806,0.0042,0.5157,0.4929,0.8218,0.3521,0.8336,0.3851
+Decision Tree,"Gini, no depth limit",0.6109,0.0107,0.2671,0.3773,0.3782,0.3767,1.0,0.6983
+Decision Tree,"Gini, max_depth=6",0.791,0.0057,0.4885,0.5129,0.7103,0.4032,0.8212,0.3155
+Decision Tree,"Entropy, max_depth=6",0.792,0.0048,0.4866,0.5093,0.7264,0.3953,0.8203,0.3281
+Decision Tree,"Gini, min_samples_leaf=100",0.795,0.0038,0.504,0.5119,0.7385,0.392,0.829,0.4213
+Random Forest,"300 trees, fully grown",0.8107,0.0023,0.5312,0.3876,0.2819,0.6211,1.0,2.2281
+Random Forest,"300 trees, min_samples_leaf=5",0.8206,0.0045,0.5529,0.5496,0.6457,0.4784,0.9329,1.8855
+Random Forest,"300 trees, leaf=5, max_features=0.3",0.8188,0.0035,0.5503,0.5404,0.5802,0.5059,0.972,3.0548
+Random Forest,"Extra Trees, leaf=5",0.8163,0.0052,0.5438,0.5413,0.6845,0.4478,0.9387,1.7692
+SVM,Linear kernel,0.8331,0.0121,0.5833,0.5559,0.727,0.4501,0.8485,2.8118
+SVM,Polynomial kernel (degree 3),0.8041,0.0116,0.4999,0.5369,0.693,0.4384,0.9155,1.8819
+SVM,RBF kernel,0.8213,0.0097,0.5121,0.5475,0.742,0.434,0.8922,2.2338
+SVM,Sigmoid kernel,0.7353,0.0229,0.4224,0.4614,0.673,0.3512,0.7436,1.0723
+Naive Bayes,"Gaussian NB, learned priors",0.795,0.0034,0.471,0.5188,0.7371,0.4004,0.7972,0.2115
+Naive Bayes,"Gaussian NB, equal priors",0.7948,0.0034,0.4695,0.5135,0.7557,0.389,0.7969,0.2494
+Naive Bayes,"Bernoulli NB, equal priors",0.7996,0.0034,0.5309,0.5035,0.7629,0.3758,0.8002,0.3738
+Gradient Boosting,sklearn GradientBoosting (unweighted),0.8242,0.0037,0.5601,0.4578,0.3566,0.6404,0.8581,19.1546
+Gradient Boosting,HistGradientBoosting (unweighted),0.8219,0.0038,0.5612,0.4411,0.3359,0.6429,0.8801,4.0207
+Gradient Boosting,HistGradientBoosting + balanced,0.8214,0.0048,0.5606,0.5415,0.7307,0.4302,0.8772,3.9874
+XGBoost,No class weighting,0.8248,0.0035,0.5637,0.4569,0.358,0.6328,0.8868,1.5425
+XGBoost,scale_pos_weight,0.8228,0.0036,0.5595,0.5417,0.7172,0.4352,0.8923,1.5566
+XGBoost,"scale_pos_weight, depth 3, 600 trees",0.8242,0.0035,0.5653,0.5458,0.7333,0.4347,0.8739,2.176
+XGBoost,scale_pos_weight + stronger L1/L2,0.8243,0.0034,0.5644,0.5443,0.7276,0.4349,0.8849,1.5602
+Voting,Hard voting (LR + RF + XGB),,,,0.5485,0.7037,0.4494,,3.4669
+Voting,Soft voting (LR + RF + XGB),0.8263,0.0038,0.5685,0.5523,0.7034,0.4547,0.8916,3.4693

@@ -9,6 +9,7 @@ from __future__ import annotations
 from pathlib import Path
 
 import matplotlib.pyplot as plt
+import numpy as np
 from matplotlib.colors import LinearSegmentedColormap
 
 from .data_loader import PROJECT_ROOT
@@ -35,6 +36,17 @@ SEQUENTIAL_BLUE = LinearSegmentedColormap.from_list(
 DIVERGING = LinearSegmentedColormap.from_list(
     "div_blue_red", ["#184f95", "#3987e5", "#9ec5f4", NEUTRAL_MID, "#f2a3a2", "#e34948", "#a92b2b"]
 )
+
+
+# One fixed color per algorithm, used in every modelling chart. The 9th entry
+# (Voting) and the baselines use ink colors instead of a generated hue.
+MODEL_ORDER = ["Logistic Regression", "KNN", "Decision Tree", "Random Forest", "SVM",
+               "Naive Bayes", "Gradient Boosting", "XGBoost"]
+MODEL_COLORS = {**dict(zip(MODEL_ORDER, SERIES)), "Voting": INK}
+
+
+def model_color(name: str) -> str:
+    return MODEL_COLORS.get(name, INK_MUTED)
 
 
 def apply_style() -> None:
@@ -96,3 +108,40 @@ def rate_bar(ax, labels, rates, counts, overall: float, color: str = HIGH_COST_C
                 bbox=dict(facecolor=SURFACE, edgecolor="none", pad=0.5))
     if title:
         ax.set_title(title)
+
+
+def plot_variant_scores(table, algorithm: str, metrics=("roc_auc", "pr_auc", "f1"), best: str | None = None) -> plt.Figure:
+    """One panel per metric: cross-validated mean (dot) and fold spread (± 1 std line)
+    for each variant of one algorithm. The chosen variant is solid, the others lighter.
+    Each panel is zoomed to its own range so small differences stay visible."""
+    labels = {"roc_auc": "ROC-AUC", "pr_auc": "PR-AUC", "f1": "F1 (high-cost)",
+              "recall": "Recall", "precision": "Precision", "accuracy": "Accuracy"}
+    color = model_color(algorithm)
+    fig, axes = plt.subplots(1, len(metrics), figsize=(4.6 * len(metrics), 0.55 * len(table) + 1.5),
+                             sharey=True)
+    for ax, m in zip(axes, metrics):
+        vals = table[m].astype(float)
+        errs = table[f"{m}_std"].astype(float) if f"{m}_std" in table else vals * 0
+        lo = np.nanmin(vals - errs.fillna(0)); hi = np.nanmax(vals + errs.fillna(0))
+        pad = max((hi - lo) * 0.25, 0.01)
+        ax.set_xlim(lo - pad, hi + pad * 2.2)
+        for i, (name, v) in enumerate(vals.items()):
+            if np.isnan(v):
+                ax.text(0.02, i, "n/a (no scores)", va="center", fontsize=8.5, color=INK_MUTED,
+                        transform=ax.get_yaxis_transform())
+                continue
+            alpha = 1.0 if name == best else 0.4
+            e = 0 if np.isnan(errs.iloc[i]) else errs.iloc[i]
+            ax.plot([v - e, v + e], [i, i], color=color, alpha=alpha, linewidth=2, solid_capstyle="round")
+            ax.plot(v, i, "o", color=color, alpha=alpha, markersize=9, markeredgecolor=SURFACE, markeredgewidth=1.5)
+            ax.text(v + e + pad * 0.15, i, f"{v:.3f}", va="center", fontsize=8.5, color=INK_SECONDARY)
+        ax.set_yticks(range(len(table)), table.index)
+        ax.set_ylim(len(table) - 0.5, -0.5)
+        ax.grid(axis="y", visible=False)
+        ax.set_title(labels.get(m, m), fontsize=11)
+    title = f"{algorithm}: variants compared (5-fold CV mean ± 1 std)"
+    if best:
+        title += f"  ·  chosen: {best}"
+    fig.suptitle(title, x=0.01, ha="left", fontsize=13, fontweight="bold")
+    fig.tight_layout()
+    return fig
